@@ -38,7 +38,7 @@ for (my $i = 0; $i <= $#lines; $i++) {
 		
 		my $date;
 		# тут баг
-		if ($lines[$i] =~ m/\d\d\.\d\d\.\d\d\d\d.*\)/) {
+		if ($lines[$i] =~ m/\d{1,2}\.\d{1,2}\.\d\d\d\d.*\)/) {
 			$date = $&;
 			$alines[$i] = $alines[$i]."</a> \($date</p>";
 		}
